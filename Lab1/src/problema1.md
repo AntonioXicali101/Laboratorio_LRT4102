@@ -159,24 +159,23 @@ Create a program that asks the user to guess a secret number. The program should
 import random
 
 def main():
-    # Generate a secret number between 1 and 10
-    numero_secreto = random.randint(1, 10)
+    # Pick a random number between 1 and 10
+    numero_oculto = random.randint(1, 10)
     intentos = 0
-    adivinado = False
+    encontrado = False
 
-    # Loop until the user guesses the correct number
-    while not adivinado:
-        # Ask the user to guess the secret number
-        guess = int(input("Guess the secret number between 1 and 10: "))
+    # Keep guessing until the user finds the correct number
+    while not encontrado:
+        intento = int(input("Guess a number between 1 and 10: "))
         intentos += 1
 
-        if guess < numero_secreto:
+        if intento < numero_oculto:
             print("Too low!")
-        elif guess > numero_secreto:
+        elif intento > numero_oculto:
             print("Too high!")
         else:
             print(f"Correct! You guessed the number in {intentos} attempts.")
-            adivinado = True
+            encontrado = True
 
 if __name__ == "__main__":
     main()
