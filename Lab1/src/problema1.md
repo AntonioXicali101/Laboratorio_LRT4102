@@ -27,3 +27,31 @@ In Python, there are several control structures that allow you to direct the flo
 Its main components are classes, objects, attributes, and methods. A class is defined using the reserved word `class`, and when it is instantiated, it generates objects with their own characteristics and behaviors. Additionally, OOP utilizes concepts such as **encapsulation**, which protects data, and **inheritance**, which facilitates code reuse and extension by sharing properties among classes.
 
 To use OOP in Python, you first define the class (for example, `Persona`) with an `__init__` constructor method that initializes the attributes, along with methods that describe its actions. Then, you create objects from the class, each with its own set of attribute values but sharing the same functions and behaviors.
+
+# Problems
+
+## Problem 1
+
+Write a program that reads a positive integer "n" entered by the user and then displays on the screen the sum of all integers from 1 to 
+n.
+
+```python
+def main():
+
+    n = int(input("Introduce un entero positivo: "))
+
+    suma = n * (n + 1) // 2 
+
+    print(f"La suma de los primeros {n} enteros positivos es: {suma}")
+
+if __name__ == "__main__":
+    main()
+```
+
+The program asks the user for a positive integer \(n\) and then uses the mathematical formula for the sum of the first \(n\) positive integers, which is:
+
+\[
+\text{sum} = \frac{n(n+1)}{2}
+\]
+
+Finally, it displays the calculated result. This way, it does not need to perform iterative additions, but instead takes advantage of the closed-form formula.
