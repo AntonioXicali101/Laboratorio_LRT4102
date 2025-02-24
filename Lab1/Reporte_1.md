@@ -73,14 +73,7 @@ pago_total = horas_trabajadas * tarifa_por_hora
 print(f"El pago correspondiente es: {pago_total}")
 ```
 
-The solution involves asking the user to input two values:
-
-* Number of hours worked
-* Hourly rate (cost per hour)
-
-Once both values are provided, the total pay is calculated using the formula:
-
-Total Pay = Hours Worked × Hourly Rate
+This code prompts the user to input two values: the number of hours worked and the hourly rate. It then calculates the total payment by multiplying these two values, and finally prints out the resulting amount.
 
 ## Problem 3
 
@@ -114,9 +107,7 @@ if __name__ == "__main__":
 
 ```
 
-The program stores data for at least six operators in a list, where each operator has a name, hourly wage, and hours worked. It then 
-iterates through the list, calculating each operator's total pay by multiplying their hourly wage by their hours worked. Finally, it 
-prints each operator's name along with their corresponding total pay.
+This program defines a list of workers, each containing a name, hourly wage, and total hours worked. It then iterates over the list to calculate each worker’s total payment (wage per hour multiplied by hours worked) and prints out the result for each.
 
 ## Problem 4
 
@@ -147,9 +138,7 @@ if __name__ == "__main__":
     main()
 ```
 
-The program starts by creating a list called numeros with at least 10 numbers. It then separates the even and odd numbers from the 
-list. To find the average of the even numbers, it sums them up and divides by the count of even numbers. For the product of the odd 
-numbers, it multiplies all the odd numbers together. Finally, it prints both the calculated average and the product.
+This program creates a list of integers, then separates them into two lists: even and odd numbers. It calculates the average of the even numbers (using the sum of even values divided by their count) and computes the product of all odd numbers (by multiplying them in a loop). Finally, it prints both the average of evens and the product of odds.
 
 ## Problem 5
 
@@ -181,9 +170,7 @@ if __name__ == "__main__":
     main()
 ```
 
-The program generates a random secret number between 1 and 10. It then prompts the user to guess the number, providing hints if the 
-guess is too high or too low. A while loop ensures that the guessing process continues until the correct number is found. The program 
-keeps track of the number of attempts and, once the user guesses correctly, it displays the total number of tries taken.
+This program generates a random number between 1 and 10, then repeatedly asks the user for a guess. After each guess, it informs the user if their guess is too high or too low. When the user guesses the correct number, it displays how many attempts were required.
 
 ## Problem 6
 
@@ -210,54 +197,51 @@ A second map should be displayed showing the **path** taken by the robot using a
 
 ### Solution
 
-The program starts by importing `random` and `numpy` to handle matrix creation and obstacle placement. It prompts the user for a matrix 
-size (ensuring it is at least **5x5**) and initializes two matrices: **one for the environment (`m`)** and **one for tracking movement 
-(`d`)**. The matrix is filled with **random obstacles (`"X"`)** and open spaces (`"o"`), with the **robot starting at (0,0) (`"R"`)** 
-and the **destination at the bottom-right (`"D"`)**.
 
-The robot moves using a `while` loop, following a **priority-based movement strategy**: it first tries to **move right**, then 
-**down**, updating its position and marking the path in the direction matrix (`d`) using arrows (`→`, `↓`). If both right and down are 
-blocked, the program **backtracks by resetting the robot’s position to the next row** and trying again. If no valid path is found after 
-exploring all options, the program prints **"No valid path exists"** and terminates. If the robot **successfully reaches the goal**, it 
-prints both matrices: **one showing obstacles and free spaces, and another displaying the path taken with arrows**. Finally, the 
-**total number of moves** taken is displayed.
- 
-The program simulates a **pathfinding algorithm in a grid with obstacles**, ensuring the robot finds a valid path or determines if 
-reaching the goal is impossible. It uses **nested loops for initialization**, a **while loop for movement**, and **conditional 
-statements (`if-elif`)** to control direction. The use of **randomized obstacles** adds unpredictability, and the program efficiently 
-**tracks the robot's journey** by updating the matrix with directional arrows.
+**Matrix Generation**  
+The program starts by prompting the user for the size of the matrix, ensuring that it is at least 5×5. Once the size is confirmed, the matrix is initialized by randomly placing obstacles (denoted by `X`) throughout the grid, making sure that neither the starting position `(0,0)` nor the destination position `(mSize-1, mSize-1)` contains any obstacle. All remaining free positions are marked with `o`. 
+
+**Starting and Destination Points**  
+In this implementation, the robot always begins at the top-left corner `(0,0)` of the matrix. Meanwhile, the bottom-right corner `(4,4)` in a 5×5 matrix— or `(mSize-1, mSize-1)` for a larger one—serves as the robot’s destination. These positions are critical checkpoints that guide both the matrix setup (to keep them obstacle-free) and the pathfinding process.
+
+**Robot Movement**  
+The robot is permitted only to move forward, turn left, or turn right in its search for a path. Whenever the robot encounters an obstacle blocking its route, it modifies its direction accordingly and continues to explore any remaining viable paths. This process involves keeping track of each step the robot takes, ensuring that no option is left unexplored unless it is blocked by an obstacle.
+
+**Pathfinding Logic**  
+A pathfinding loop orchestrates the robot’s movements until it either successfully reaches the destination or runs out of valid moves. If the robot eventually occupies the final cell `(mSize-1, mSize-1)`, the program concludes that a path exists. Conversely, if the robot cannot find a route after evaluating all possible movements, the program determines that it is “Impossible to reach the destination.”
+
+**Output**  
+At the end of the procedure, the program presents two distinct maps. The first map shows the initial layout of the matrix, illustrating all free spaces (marked by `o`) and obstacles (denoted by `X`). The second map depicts the exact path followed by the robot, represented by directional arrows (such as `→` and `↓`). If, however, no valid path is discovered, the program simply displays the message “Impossible to reach the destination,” indicating that the robot was unable to navigate to the final cell.
 
 # Problem 7
 
-This solution employs the Object-Oriented Programming (OOP) paradigm to implement a simple inventory management system. The design is 
-structured around two primary classes: Producto and Inventario, which encapsulate the behavior and data for individual products and the 
-overall inventory, respectively. A menu-driven interface in the main() function allows the user to interact with the system.
+This solution employs the Object-Oriented Programming (OOP) paradigm to implement a simple inventory management system. The design is structured around two primary classes: `Producto` and `Inventario`, which encapsulate the behavior and data for individual products and the overall inventory, respectively. A menu-driven interface in the `main()` function allows the user to interact with the system.
 
-## Key components
+## Key Components
 
 ### 1. `Producto` Class
-* **Purpose:**  
+* **Propósito:**  
   Represents a single product within the inventory.
   
-* **Attributes:**  
+* **Atributos:**  
   - `nombre`: The name of the product.  
   - `precio`: The price per unit of the product.  
   - `cantidad_en_stock`: The current stock level or quantity available.
 
-* **Methods:**  
+* **Métodos:**  
   - `vender(cantidad_vendida)`:  
     Reduces the product’s stock by the specified amount if sufficient stock is available. If not, it prints a message indicating insufficient stock.
   - `mostrar_informacion()`:  
     Returns a formatted string that contains the product’s details (name, price, and stock).
 
 ### 2. `Inventario` Class
-* **Purpose:**  
+* **Propósito:**  
   Manages a collection of `Producto` objects and provides functionality to update and retrieve inventory data.
   
-* **Attributes:**  
+* **Atributos:**  
   - `productos`: A list that stores instances of the `Producto` class.
   
-* **Methods:**  
+* **Métodos:**  
   - `agregar_producto(producto)`:  
     Adds a new `Producto` object to the inventory list.
   - `actualizar_stock(nombre, cantidad_vendida)`:  
@@ -270,16 +254,16 @@ overall inventory, respectively. A menu-driven interface in the main() function 
     A helper method that performs a case-insensitive search for a product in the inventory by its name.
 
 ### 3. `main()` Function
-* **Purpose:**  
+* **Propósito:**  
   Serves as the entry point of the program, offering a user interface to interact with the inventory system.
   
-* **Flow:**  
-  - An instance of the `Inventario` class is created.
-  - The program enters a loop where it displays a menu with options to:
-    - Add a product
-    - Sell a product
-    - Show product information
-    - Calculate and display the total inventory value
-    - Exit the program
-  - Based on the user’s choice, the corresponding methods of the `Producto` or `Inventario` classes are invoked to perform the required operations.
-  - The loop continues until the user chooses to exit.
+* **Flujo:**  
+  1. Se crea una instancia de la clase `Inventario`.  
+  2. The program enters a loop where it displays a menu with options to:
+     - Add a product
+     - Sell a product
+     - Show product information
+     - Calculate and display the total inventory value
+     - Exit the program
+  3. Based on the user’s choice, the corresponding methods of the `Producto` or `Inventario` classes are invoked to perform the required operations.
+  4. The loop continues until the user chooses to exit.
