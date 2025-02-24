@@ -50,11 +50,6 @@ if __name__ == "__main__":
 
 The program asks the user for a positive integer \(n\) and then uses the mathematical formula for the sum of the first \(n\) positive integers, which is:
 
-```latex
-\[
-\text{sum} = \frac{n(n+1)}{2}
-\]
-```
-
+Sum = (n(n+1))/2
 
 Finally, it displays the calculated result. This way, it does not need to perform iterative additions, but instead takes advantage of the closed-form formula.
