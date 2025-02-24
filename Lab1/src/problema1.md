@@ -60,21 +60,17 @@ Write a program that asks the user for the number of hours worked and the hourly
 the screen.
 
 ```python
-def main():
-    # Ask the user for the number of hours worked
-    horas_trabajadas = float(input("Enter the number of hours worked: "))
+# Solicita al usuario el número de horas trabajadas
+horas_trabajadas = float(input("Introduce el número de horas trabajadas: "))
 
-    # Ask the user for the hourly rate
-    costo_por_hora = float(input("Enter the hourly rate: "))
+# Solicita la tarifa por hora
+tarifa_por_hora = float(input("Introduce la tarifa por hora: "))
 
-    # Calculate the total pay
-    paga_total = horas_trabajadas * costo_por_hora
+# Calcula el pago total
+pago_total = horas_trabajadas * tarifa_por_hora
 
-    # Display the result
-    print(f"Your total pay is: $ {paga_total}")
-
-if __name__ == "__main__":
-    main()
+# Muestra el resultado
+print(f"El pago correspondiente es: {pago_total}")
 ```
 
 The solution involves asking the user to input two values:
@@ -93,24 +89,29 @@ Print the name and the total pay for each operator.
 
 ```python
 def main():
-    # Create a list of operators (name, hourly wage, hours worked)
-    operadores = [
-        ("Alice", 15.0, 40),
-        ("Bob", 18.0, 35),
-        ("Charlie", 20.0, 30),
-        ("Diana", 22.5, 38),
-        ("Edward", 17.5, 42),
-        ("Fiona", 19.0, 36)
-    ]
+    """
+    Calcula el pago total de cada operador en una lista.
+    (nombre, sueldo_hora, horas_trabajadas).
+    """
     
-    # Iterate over the list and calculate the total pay for each operator
-    for operador in operadores:
-        nombre, sueldo_por_hora, horas_trabajadas = operador
-        sueldo_a_pagar = sueldo_por_hora * horas_trabajadas
-        print(f"Operator: {nombre}, Total pay: $ {sueldo_a_pagar}")
+    # Lista de operadores
+    personal = [
+        ("Antonio", 10, 40),
+        ("José", 8, 40),
+        ("Ariadna", 8.5, 45),
+        ("Bryan", 12, 30),
+        ("Andrea", 13.5, 38),
+        ("Alexa", 10.5, 44)
+    ]
+
+    # Recorremos la lista y calculamos la paga de cada operador
+    for nombre_operador, tarifa_hora, horas_totales in personal:
+        pago_total = tarifa_hora * horas_totales
+        print(f"{nombre_operador} recibirá un pago de: {pago_total}")
 
 if __name__ == "__main__":
     main()
+
 ```
 
 The program stores data for at least six operators in a list, where each operator has a name, hourly wage, and hours worked. It then 
