@@ -23,18 +23,14 @@ The listening.py file is a node that acts as a subscriber. This node subscribes 
 - Create a keyboard control for turtlesim.
 - Draw a square and a equilateral triangule withb turtlesim (No control).
 
-
-![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/21ee6d8cb3a91c9c9737f64a9433ff470653584a/Lab2/media/square.png)
-
-![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/69a84f0226a0e691ce45832ab7da74bab49cbc2d/Lab2/media/triangle.png)
-
-
-
 ### teleop.py
-This code allows keyboard teleoperation of the turtlesim turtle. It captures key presses (without needing to press Enter) and maps 
-specific keys to linear and angular velocity commands. For example, keys such as 'w', 'a', 's', and 'd' are used for translational 
-movement, while 'o' and 'i' control rotation (right and left, respectively). The node publishes these commands to the `/turtle1/
-cmd_vel` topic.
+Teleoperation refers to a system that allows a robot or vehicle to be remotely controlled using an interface, such as a controller or app. In the context of robotics, teleoperation is used to send motion commands and sensor control from a remote station to a robot. This is useful when the robot is in an environment where direct interaction is difficult or dangerous for humans. In platforms like ROS, teleoperation is commonly used to enable manual control of robots, such as turtles in simulators or mobile robots in the real world.
+
+
+![Draw a square](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/21ee6d8cb3a91c9c9737f64a9433ff470653584a/Lab2/media/square.png)
+
+![Draw a triangle](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/69a84f0226a0e691ce45832ab7da74bab49cbc2d/Lab2/media/triangle.png)
+
 
 ### CyT.py
 This code demonstrates how to draw geometric shapes (such as a triangle and a square) using turtlesim. It calculates vertex coordinates 
