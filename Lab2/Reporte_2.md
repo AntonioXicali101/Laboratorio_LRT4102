@@ -26,6 +26,9 @@ The listening.py file is a node that acts as a subscriber. This node subscribes 
 
 ![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/21ee6d8cb3a91c9c9737f64a9433ff470653584a/Lab2/media/square.png)
 
+![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/69a84f0226a0e691ce45832ab7da74bab49cbc2d/Lab2/media/triangle.png)
+
+
 
 ### teleop.py
 This code allows keyboard teleoperation of the turtlesim turtle. It captures key presses (without needing to press Enter) and maps 
