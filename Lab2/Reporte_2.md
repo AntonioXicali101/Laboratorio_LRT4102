@@ -1,6 +1,6 @@
 # Report_2_174527
 
-## Lab2 Basic
+## BASIC
 - Create a ros package called Prcaticas_lab with the dependencies rospy, roscpp & std_msgs. 
 - Insert the files listener.py & talker.py
 - Compile the package.
@@ -19,7 +19,7 @@ The listening.py file is a node that acts as a subscriber. This node subscribes 
 
 ![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/2945d33b8a92d1e4b8cd6ff05ad89878aa967ee5/Lab2/media/listener.png)
 
-## Lab 2 Medium
+## MEDIUM
 - Create a keyboard control for turtlesim.
 - Draw a square and a equilateral triangule withb turtlesim (No control).
 
@@ -35,7 +35,7 @@ based on preset dimensions, validates that the vertices are within the work area
 to draw the shape. Additionally, it includes functions to clear the screen and teleport the turtle back to its initial position after 
 drawing.
 
-## Lab2 Advanced
+## ADVANCED
 - Position control for turtlesim (P).
 - Position control for turtlesim (P).
 - Position control for turtlesim (P).
