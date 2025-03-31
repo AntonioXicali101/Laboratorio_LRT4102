@@ -12,6 +12,8 @@
 This is a basic ROS publisher node that sends "hello world" messages to the "chatter" topic at a rate of 1 Hz. It demonstrates the 
 creation of a publisher, node initialization, and periodic message publication using a simple loop.
 
+![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/c722a0bb625e64d56a408d8d1038058936e2a49e/Lab2/media/talker.png)
+
 
 ### listener.py
 This is a basic ROS subscriber node that listens to the "chatter" topic and logs any messages received. It uses a callback function to 
