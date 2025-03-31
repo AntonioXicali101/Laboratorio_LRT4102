@@ -28,11 +28,13 @@ Teleoperation refers to a system that allows a robot or vehicle to be remotely c
 
 ### draw_square.py
 This code draws a square using a robot in a ROS environment. The code creates a ROS node called draw_square and publishes movement commands to the topic to control the turtle. The process consists of moving the turtle forward for 1 second, then turning 90 degrees and repeating this cycle four times to complete a square. After the square is drawn, the turtle moves forward once more to return to the starting point and then stops.
+
 ![Draw a square](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/21ee6d8cb3a91c9c9737f64a9433ff470653584a/Lab2/media/square.png)
 
 
 ### draw_triangle.py
 This code draws a triangle using a robot in a ROS environment. The draw_triangle node publishes movement commands to the topic to control the turtle. The robot moves forward for 1 second, then turns 120 degrees and repeats this process three times to complete a triangle. After drawing the triangle, the turtle moves forward to the starting point and then stops.
+
 ![Draw a triangle](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/69a84f0226a0e691ce45832ab7da74bab49cbc2d/Lab2/media/triangle.png)
 
 
