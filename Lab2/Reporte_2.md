@@ -9,15 +9,13 @@
 - Conclude about its functioning.
 
 ### talker.py
-This is a basic ROS publisher node that sends "hello world" messages to the "chatter" topic at a rate of 1 Hz. It demonstrates the 
-creation of a publisher, node initialization, and periodic message publication using a simple loop.
+The talker.py file is a node that acts as a publisher. Its main function is to send messages to a specific topic. In this case, the node creates a message and periodically publishes it to a specific topic. The node follows a continuous cycle, sending the message at regular intervals until it stops.The talker.py file is a node that acts as a publisher. Its main function is to send messages to a specific topic. In this case, the node creates a message and periodically publishes it to a specific topic. The node follows a continuous cycle, sending the message at regular intervals until it stops.
 
 ![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/c722a0bb625e64d56a408d8d1038058936e2a49e/Lab2/media/talker.png)
 
 
 ### listener.py
-This is a basic ROS subscriber node that listens to the "chatter" topic and logs any messages received. It uses a callback function to 
-process incoming messages and prints the information to the console.
+The listening.py file is a node that acts as a subscriber. This node subscribes to a specific topic and waits to receive messages published by the talker.py node. Each time it receives a message, the node executes a callback function that processes the message content. In this case, the received message is displayed on the subscriber's terminal. This subscription and reception process enables communication between different nodes in a distributed system.
 
 ![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/2945d33b8a92d1e4b8cd6ff05ad89878aa967ee5/Lab2/media/listener.png)
 
