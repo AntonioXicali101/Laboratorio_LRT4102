@@ -17,7 +17,7 @@ creation of a publisher, node initialization, and periodic message publication u
 This is a basic ROS subscriber node that listens to the "chatter" topic and logs any messages received. It uses a callback function to 
 process incoming messages and prints the information to the console.
 
-![Descripción de la imagen](Lab2/media/listener.png)
+![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/2945d33b8a92d1e4b8cd6ff05ad89878aa967ee5/Lab2/media/listener.png)
 
 ## Lab 2 Medium
 - Create a keyboard control for turtlesim.
