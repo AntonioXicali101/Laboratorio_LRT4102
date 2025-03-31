@@ -23,6 +23,10 @@ The listening.py file is a node that acts as a subscriber. This node subscribes 
 - Create a keyboard control for turtlesim.
 - Draw a square and a equilateral triangule withb turtlesim (No control).
 
+
+![Descripción de la imagen](https://github.com/AntonioXicali101/Laboratorio_LRT4102/blob/21ee6d8cb3a91c9c9737f64a9433ff470653584a/Lab2/media/square.png)
+
+
 ### teleop.py
 This code allows keyboard teleoperation of the turtlesim turtle. It captures key presses (without needing to press Enter) and maps 
 specific keys to linear and angular velocity commands. For example, keys such as 'w', 'a', 's', and 'd' are used for translational 
