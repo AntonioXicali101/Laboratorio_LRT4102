@@ -78,25 +78,19 @@ if __name__ == '__main__':
 
 ## Explanation
 
-1. **Node Initialization:**
-   - The node is initialized with the name `turtle_teleport_controller`.
-   - It waits for the `/turtle1/teleport_absolute` service to become available and creates a service proxy.
+Its main objective is to teleport turtle1 to a user-specified position and orientation. This script allows robot navigation and control, such as distance to the goal and angle to the goal, to be simulated without the need for gradual movement, using the ROS teleportation service.
 
-2. **Pose Subscription:**
-   - The node subscribes to the `/turtle1/pose` topic to get the current pose of `turtle1`.
-   - The `pose_callback` function updates the internal `current_pose` variable.
+1. **Initialization of the ROS Node and Services**
+The code begins by initializing a ROS node called 'turtle_movement_controller'. This node subscribes to the /turtle1/pose topic, which allows it to obtain the turtle's current position. Additionally, the script waits for the /turtle1/teleport_absolute service to become available. This service allows the turtle to be moved to an exact position in simulator space.
 
-3. **User Input:**
-   - The `get_goal_from_user()` function prompts the user to enter the desired goal coordinates (x, y) and the desired orientation (θ, in radians).
+2. **User Interaction**
+One of the key features of this code is its user interaction. Upon execution, the code prompts the user to enter the turtle's x, y coordinates and theta orientation in radians. This information is used to determine the target to which the turtle is to be teleported.
 
-4. **Metrics Calculation (DTG and ATG):**
-   - The `calculate_dtg_atg()` function calculates:
-     - **DTG (Distance To Goal):** Using the Euclidean distance formula.
-     - **ATG (Angle To Goal):** Using the `atan2` function.
-   - These metrics are logged for user feedback. The comments also explain that if the turtle were to move gradually, linear velocity would be proportional to DTG and angular velocity to the heading error.
+3. **Distance and Angle Calculation**
+Once the user has provided the goal coordinates, the code calculates the Euclidean distance from the turtle's current position to the desired goal. It also calculates the angle using the atan2 function, which gives the angle to the goal, taking into account the difference between the current coordinates and the goal coordinates.
 
-5. **Direct Teleportation:**
-   - Instead of gradually moving the turtle, the node uses the teleport service to instantly move `turtle1` to the user-specified position and orientation.
+4. **Teleportation and Results**
+Based on the calculated values, the code proceeds to teleport the turtle to the new coordinates specified by the user. After completing the teleportation, the code displays a message informing the turtle of its new position and orientation. If an error occurs during the teleportation process, the exception is caught and an error message is displayed.
 
-6. **Infinite Loop:**
-   - The `run()` method contains an infinite loop that continuously prompts the user for new goal inputs and teleports `turtle1` accordingly, allowing for repeated testing.
+5. **Loop Repeat**
+The loop repeats continuously, allowing the user to enter new coordinates to interactively teleport the turtle. This dynamic makes it easy to simulate different scenarios and allows the user to experiment with robot control in a safe and controlled environment.
