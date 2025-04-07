@@ -76,7 +76,7 @@ if __name__ == '__main__':
         pass
 ```
 
-## Explanation
+## Explanation of code
 
 Its main objective is to teleport turtle1 to a user-specified position and orientation. This script allows robot navigation and control, such as distance to the goal and angle to the goal, to be simulated without the need for gradual movement, using the ROS teleportation service.
 
