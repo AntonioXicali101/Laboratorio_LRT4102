@@ -1,0 +1,7 @@
+<launch>
+    <!-- Lanzar el nodo de turtlesim -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim"/>
+
+    <!-- Lanzar tu script Python como nodo -->
+    <node pkg="turtlesim_detection" type="turtlesim_detection_precision.py" name="turtlesim_detection_precision" output="screen"/>
+</launch>
