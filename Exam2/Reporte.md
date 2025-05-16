@@ -10,9 +10,9 @@ The ability to accurately detect debris is essential for efficient operation, as
 
 Detection precision is formally defined as:
 
-\[
+$$
 \text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}
-\]
+$$
 
 where:
 
